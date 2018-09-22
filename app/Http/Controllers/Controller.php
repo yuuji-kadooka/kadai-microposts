@@ -15,7 +15,7 @@ class Controller extends BaseController
         $count_microposts = $user->microposts()->count();
         
         return [
-            'count_microposts' = $count_microposts,
+            'count_microposts' => $count_microposts,
         ];
     }
 }
