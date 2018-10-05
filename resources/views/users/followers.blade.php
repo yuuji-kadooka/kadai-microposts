@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('count')
+@section('content')
     <div class="row">
         <aside class="col-xs-4">
             <div class="panel panel-default">
@@ -19,7 +19,7 @@
                 <li role="presentation" class="{{ Request::is('users/*/followings') ? 'active' : '' }}"><a href="{{ route('users.followings', ['id' => $user->id]) }}">Followings <span class="badge">{{ $count_followings }}</span></a></li>
                 <li role="presentation" class="{{ Request::is('users/*/followers') ? 'active' : '' }}"><a href="{{ route('users.followers', ['id' => $user->id]) }}">Followers <span class="badge">{{ $count_followers }}</span></a></li>
             </ul>
-            @include('users.users', ['users' => $user])
+            @include('users.users', ['users' => $users])
         </div>
     </div>
 @endsection
